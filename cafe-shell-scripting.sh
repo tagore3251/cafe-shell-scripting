@@ -64,6 +64,7 @@ VALIDATE $? "Restart Apache to Apply Changes"
 ln -s /var/www/ /home/ec2-user/environment
 
 cd /home/ec2-user/environment
+rm -rf /home/ec2-user/environment/*
 
 wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-200-ACACAD-3-113230/03-lab-mod5-challenge-EC2/s3/setup.zip &>>$LOG_FILE_NAME
 VALIDATE $? "download the setup file"
