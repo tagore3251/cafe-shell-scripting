@@ -106,7 +106,7 @@ VALIDATE $? "Execute parameters.sh"
 
 cd ..
 
-cd db/
+cd /home/ec2-user/environment/db/
 ./set-root-password.sh./create-db.sh &>>$LOG_FILE_NAME
 VALIDATE $? "Execute create-db.sh"
 
