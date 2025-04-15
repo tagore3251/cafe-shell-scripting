@@ -46,7 +46,7 @@ VALIDATE $? "Enabling Apache Server"
 sudo systemctl start httpd &>>$LOG_FILE_NAME
 VALIDATE $? "Starting Apache server"
 
-sudo yum install mariadb-server -y &>>$LOG_FILE_NAME
+sudo dnf module install mariadb:10.11/server -y &>>$LOG_FILE_NAME
 VALIDATE $? "Install MariaDB (MySQL)"
 
 sudo systemctl enable mariadb &>>$LOG_FILE_NAME
