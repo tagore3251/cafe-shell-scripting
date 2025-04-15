@@ -102,13 +102,17 @@ cd
 cd /home/ec2-user/environment/setup/
 
 ./set-app-parameters.sh &>>$LOG_FILE_NAME
-VALIDATE $? "Execute parameters.sh"
+VALIDATE $? "Execute set-app-parameters.sh"
 
 cd ..
 
 cd /home/ec2-user/environment/db/
-./set-root-password.sh./create-db.sh &>>$LOG_FILE_NAME
+./set-root-password.sh &>>$LOG_FILE_NAME
+VALIDATE $? "Execute set-root-password.sh"
+
+./create-db.sh &>>$LOG_FILE_NAME
 VALIDATE $? "Execute create-db.sh"
+
 
 sudo sed -i "2i date.timezone = \"America/New_York\" " /etc/php.ini &>>$LOG_FILE_NAME
 VALIDATE $? "Time Set"
