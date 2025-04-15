@@ -95,7 +95,6 @@ VALIDATE $? "download the aws.phar file"
 unzip aws -d /var/www/html/cafe/ &>>$LOG_FILE_NAME
 VALIDATE $? "unzip aws"
 
-
 sudo chmod -R +r /var/www/html/cafe/
 
 cd
@@ -112,7 +111,6 @@ VALIDATE $? "Execute set-root-password.sh"
 
 ./create-db.sh &>>$LOG_FILE_NAME
 VALIDATE $? "Execute create-db.sh"
-
 
 sudo sed -i "2i date.timezone = \"America/New_York\" " /etc/php.ini &>>$LOG_FILE_NAME
 VALIDATE $? "Time Set"
