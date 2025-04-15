@@ -99,7 +99,7 @@ VALIDATE $? "unzip aws"
 sudo chmod -R +r /var/www/html/cafe/
 
 cd
-cd environment/setup/
+cd /home/ec2-user/environment/setup/
 
 ./set-app-parameters.sh &>>$LOG_FILE_NAME
 VALIDATE $? "Execute parameters.sh"
