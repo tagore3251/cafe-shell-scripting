@@ -55,6 +55,9 @@ VALIDATE $? "Enabling MariaDB Server"
 sudo systemctl start mariadb &>>$LOG_FILE_NAME
 VALIDATE $? "Starting MariaDB server"
 
+sudo mysql_secure_installation &>>$LOG_FILE_NAME
+VALIDATE $? "MySQL secure install"
+
 sudo yum install php php-mysqlnd -y &>>$LOG_FILE_NAME
 VALIDATE $? "Install PHP"
 
