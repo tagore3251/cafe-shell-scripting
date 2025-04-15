@@ -95,7 +95,7 @@ unzip aws -d /var/www/html/cafe/ &>>$LOG_FILE_NAME
 VALIDATE $? "unzip aws"
 
 
-chmod -R +r /var/www/html/cafe/
+sudo chmod -R +r /var/www/html/cafe/
 
 cd
 cd environment/setup/
