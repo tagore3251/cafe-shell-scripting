@@ -34,6 +34,8 @@ echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 CHECK_ROOT
 
+sudo su -
+
 sudo yum update -y &>>$LOG_FILE_NAME
 VALIDATE $? "Update the System"
 
